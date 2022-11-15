@@ -1,0 +1,14 @@
+.vehicle-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background-color: var(--clr-yellow);
+/*     .vehicle-card {
+        width:30%;
+        margin: 0 10px;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    } */
+}

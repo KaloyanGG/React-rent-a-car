@@ -1,0 +1,52 @@
+.vehicle-card {
+    
+    &:hover{
+        background-color: var(--clr-human);
+    }
+    text-align: center;
+    width: 33.33%;
+    padding: 1.5rem 1.5rem;
+    position: relative;
+    height: 350px;
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .info{
+        height: 45%;
+        width: 65%;
+        display: inline-block;
+    }
+    .buttons{
+        width: 35%;
+        height: 45%;
+        float: right;
+        display: inline-flex;
+        flex-direction: column;
+        
+
+        button{
+
+            height:100%;
+            width: 100%;
+            padding: 0;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align:middle;
+
+            &:hover{
+                background-color: var(--clr-purple);
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 55%;
+        object-fit: cover;
+        position: relative;
+    }
+}

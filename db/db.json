@@ -7,7 +7,7 @@
             "constructionYear": 2010,
             "fuelType": "Diesel",
             "numberOfSeats": 5,
-            "picture": "https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/fiesta/2018/collections/18_fiesta_4dr_sedan_se_fwd/18_fiesta_4dr_sedan_se_fwd_360.png",
+            "picture": "https://bit.ly/3GjmU1g",
             "pricePerDay": 50,
             "count": 5,
             "type": "economy"
@@ -16,106 +16,99 @@
             "id": 2,
             "brand": "Peugeot",
             "model": "308",
-            "constructionYear": 2015,
-            "fuelType": "Petrol",
-            "numberOfSeats": 5,
-            "picture": "https://www.peugeot.com.eg/eg-en/peugeot-308-2019/peugeot-308-2019-1.png",
-            "pricePerDay": 60,
-            "count": 20,
-            "type": "estate"
-        },
-        {
-            "id": 3,
-            "brand": "BMW",
-            "model": "X5",
-            "constructionYear": 2018,
-            "fuelType": "Diesel",
-            "numberOfSeats": 5,
-            "picture": "https://www.bmw.com/content/dam/bmw/common/all-models/x-series/x5/2018/at-a-glance/bmw-x5-2018-model-card.png",
-            "pricePerDay": 100,
-            "count": 10,
-            "type": "SUV"
-        },
-        {
-            "id": 4,
-            "brand": "Mercedes",
-            "model": "C200",
-            "constructionYear": 2019,
-            "fuelType": "Petrol",
-            "numberOfSeats": 5,
-            "picture": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/c-class/saloon/_jcr_content/image.MQ6.12.20190604150610.jpeg",
-            "pricePerDay": 80,
-            "count": 15,
-            "type": "luxury"
-        },
-        {
-            "id": 5,
-            "brand": "Audi",
-            "model": "A4",
-            "constructionYear": 2017,
-            "fuelType": "Diesel",
-            "numberOfSeats": 5,
-            "picture": "https://www.audi.com/content/dam/gbp2/experience-audi/vehicles/a4-saloon/2019/overview/1920x1080-a4-saloon-2019-model-card.png",
-            "pricePerDay": 70,
-            "count": 10,
-            "type": "cargo"
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "email": "johndoe@mail.xom",
-            "phoneNumber": "123456789"
-        },
-        {
-            "id": 2,
-            "name": "Mane Doe",
-            "email": "manedoe@mail.com",
-            "phoneNumber": "987654321"
-        },
-        {
-            "id": 3,
-            "name": "Koko G",
-            "email": "k@k",
-            "phoneNumber": "23545435"
-        }
-    ],
-    "rentalEvents":[
-        {
-            "id": 1,
-            "vehicleId": 1,
-            "customerId": 1,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        },
-        {
-            "id": 2,
-            "vehicleId": 2,
-            "customerId": 2,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        },
-        {
-            "id": 3,
-            "vehicleId": 3,
-            "customerId": 3,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        },
-        {
-            "id": 4,
-            "vehicleId": 4,
-            "customerId": 1,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        },
-        {
-            "id": 5,
-            "vehicleId": 5,
-            "customerId": 2,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        }
-    ]
+      "year": 2015,
+      "fuelType": "Petrol",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3O9s0yI",
+      "pricePerDay": 60,
+      "count": 20,
+      "type": "estate"
+    },
+    {
+      "id": 3,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2018,
+      "fuelType": "Diesel",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3EwU8Zr",
+      "pricePerDay": 100,
+      "count": 10,
+      "type": "SUV"
+    },
+    {
+      "id": 4,
+      "brand": "Mercedes",
+      "model": "C200",
+      "year": 2019,
+      "fuelType": "Petrol",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3AgV1Tt",
+      "pricePerDay": 80,
+      "count": 15,
+      "type": "luxury"
+    },
+    {
+      "id": 5,
+      "brand": "Audi",
+      "model": "A4",
+      "year": 2017,
+      "fuelType": "Diesel",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3Gjhzag",
+      "pricePerDay": 70,
+      "count": 10,
+      "type": "cargo"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@mail.xom",
+      "phoneNumber": "123456789"
+    },
+    {
+      "id": 2,
+      "name": "Mane Doe",
+      "email": "manedoe@mail.com",
+      "phoneNumber": "987654321"
+    },
+    {
+      "id": 3,
+      "name": "Koko G",
+      "email": "k@k",
+      "phoneNumber": "23545435"
+    }
+  ],
+  "rentalEvents": [
+    {
+      "id": 2,
+      "vehicleId": 2,
+      "customerId": 2,
+      "startDate": "2019-12-01",
+      "endDate": "2019-12-05"
+    },
+    {
+      "id": 3,
+      "vehicleId": 3,
+      "customerId": 3,
+      "startDate": "2019-12-01",
+      "endDate": "2019-12-05"
+    },
+    {
+      "id": 4,
+      "vehicleId": 4,
+      "customerId": 1,
+      "startDate": "2019-12-01",
+      "endDate": "2019-12-05"
+    },
+    {
+      "id": 5,
+      "vehicleId": 5,
+      "customerId": 2,
+      "startDate": "2019-12-01",
+      "endDate": "2019-12-05"
+    }
+  ]
 }

@@ -1,8 +1,9 @@
-@import '../../colors.css';
+//@import '../../colors.css';
 .header{
     background-color: var(--clr-green);
+    height: 10vh;
     nav{
-        height: 10vh;
+        height:100%;
         ul{
             height: 100%;
             display: flex;
@@ -10,7 +11,6 @@
             align-items: center;
             li{
                 height: 100%;
-
                 a{
                     padding: 0px 30px;
                     display: flex;

@@ -74,3 +74,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
+*:hover, *{
+  text-decoration: none;
+}
