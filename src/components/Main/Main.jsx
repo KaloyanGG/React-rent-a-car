@@ -4,15 +4,48 @@ import { Home } from "./Home/Home";
 import { VehicleList } from "./VehicleList/VehicleList";
 import './Main.scss';
 import { VehicleInfo } from "./VehicleList/VehicleInfo/VehicleInfo";
+import { Register } from "../User/Register/Register";
+import { Login } from "../User/Login/Login";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../context/auth-context";
+import { Logout } from "../User/Logout/Logout";
+import { NonAuthenticatedGuard } from "../Guards/NonAuthenticatedGuard";
+import { AuthenticatedRoute } from "../Guards/AuthenticatedRoute";
 
-export function Main(){
+export function getLoggedUser() {
+    return JSON.parse(localStorage.getItem('loggedUser'));
+}
+
+export function Main() {
+
+
+    const { user } = useContext(AuthContext);
+    const [personName, setPersonName] = useState(null);
+
+    useEffect(() => {
+        if (user) {
+            setPersonName(user.name);
+        } else {
+            setPersonName(null);
+        }
+        // setPersonName(user ? user.name : null);
+    }, [user]);
+
+
     return (
         <main className="main">
+            <p>Hello, {personName || 'Guest'}!</p>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/vehicle-list" element={<VehicleList/>} />
-                <Route path="/customers" element={<Customers/>} />
-                <Route path="/vehicle-list/:id" element={<VehicleInfo/>} />
+                <Route exact path="/register" element={<NonAuthenticatedGuard><Register /></NonAuthenticatedGuard>} />
+                <Route exact path="/login" element={<NonAuthenticatedGuard><Login /></NonAuthenticatedGuard>} />
+
+{/* //!Fix me: */}
+                <Route exact path="/" element={<AuthenticatedRoute><Home /></AuthenticatedRoute>} >
+                    <Route path="/vehicle-list" element={<VehicleList />} />
+                    <Route path="/customers" element={<Customers />} />
+                    <Route path="/vehicle-list/:id" element={<VehicleInfo />} />
+                    <Route path="/logout" element={<Logout />} />
+                </Route>
             </Routes>
         </main>
     )

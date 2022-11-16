@@ -1,18 +1,18 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { deleteVehicleById } from '../../../../utils/http-utils/vehicle-requests';
+import { useNavigate } from 'react-router-dom'
 import './VehicleCard.scss'
 
-export function VehicleCard({ vehicle }) {
+export function VehicleCard({ vehicle, deleteVehicle }) {
 
     const navigate= useNavigate();
 
     const showDetails = () => {
         navigate(`/vehicle-list/${vehicle.id}`);
     };
-    async function deleteVehicle(){
-        await deleteVehicleById(vehicle.id);
-        navigate('/vehicle-list');
-    };
+    //async function deleteVehicle(){
+    //    await deleteVehicleById(vehicle.id);
+    //    navigate('/vehicle-list'); //! WHY NOT WORKING??
+    //    
+    //};
 
     return (
         <div className="vehicle-card">
@@ -28,7 +28,7 @@ export function VehicleCard({ vehicle }) {
                 <button onClick={()=>showDetails()}>
                     Details
                 </button>
-                <button onClick={()=>deleteVehicle()}>
+                <button onClick={()=>deleteVehicle(vehicle.id)}>
                     Delete
                 </button>
             </div>
