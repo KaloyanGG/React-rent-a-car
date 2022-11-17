@@ -1,9 +1,28 @@
-.vehicle-list{
+.vehicle-list {
+    .link-container {
+        width: 33.33%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .add {
+            font-size: 2rem;
+            color:black;
+            border:1px solid var(--clr-purple);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            &:hover{
+                background-color: var(--clr-purple);
+                color: white;
+            }
+        }
+        
+    }
+
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     background-color: var(--clr-yellow);
-/*     .vehicle-card {
+    /*     .vehicle-card {
         width:30%;
         margin: 0 10px;
         img {

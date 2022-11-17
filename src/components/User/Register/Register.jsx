@@ -50,20 +50,20 @@ export function Register() {
                     <h1>Register</h1>
                     <p>Please fill in this form to create an account.</p>
                     <hr />
-                    <label for="name"><b>Name</b></label>
+                    <label htmlFor="name"><b>Name</b></label>
                     <input value={user.name} onChange={onInputChange} type="text" placeholder="Enter Full name" name="name" id="name" required />
 
-                    <label for="email"><b>Email</b></label>
+                    <label htmlFor="email"><b>Email</b></label>
                     <input value={user.email} onChange={onInputChange} type="text" placeholder="Enter Email" name="email" id="email" required />
 
-                    <label for="phoneNumber"><b>Phone Number</b></label>
+                    <label htmlFor="phoneNumber"><b>Phone Number</b></label>
                     <input value={user.phoneNumber} onChange={onInputChange} type="text" placeholder="Enter Phone Number" name="phoneNumber" id="phoneNumber" />
                     {phoneError && <p className="error">Phone number must contain only numbers</p>}
 
-                    <label for="password"><b>Password</b></label>
+                    <label htmlFor="password"><b>Password</b></label>
                     <input value={user.password} onChange={onInputChange} type="password" placeholder="Enter Password" name="password" id="password" required />
 
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
                     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required />
                     <hr />
 

@@ -1,5 +1,12 @@
 
 .main{
+    .hello{
+        position: absolute;
+        font-size: 1.5rem;
+    }
+    
+
+    // height: 85vh;
     min-height: 85vh;
     position: relative;
     background-color: var(--clr-yellow);

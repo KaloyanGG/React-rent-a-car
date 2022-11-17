@@ -1,129 +1,122 @@
 {
-    "vehicles": [
-        {
-            "id": 1,
-            "brand": "Ford",
-            "model": "Fiesta",
-            "constructionYear": 2010,
-            "fuelType": "Diesel",
-            "numberOfSeats": 5,
-            "picture": "https://bit.ly/3GjmU1g",
-            "pricePerDay": 50,
-            "count": 5,
-            "type": "economy"
-        },
-        {
-            "id": 2,
-            "brand": "Peugeot",
-            "model": "308",
-            "year": 2015,
-            "fuelType": "Petrol",
-            "numberOfSeats": 5,
-            "picture": "https://bit.ly/3O9s0yI",
-            "pricePerDay": 60,
-            "count": 20,
-            "type": "estate"
-        },
-        {
-            "id": 3,
-            "brand": "BMW",
-            "model": "X5",
-            "year": 2018,
-            "fuelType": "Diesel",
-            "numberOfSeats": 5,
-            "picture": "https://bit.ly/3EwU8Zr",
-            "pricePerDay": 100,
-            "count": 10,
-            "type": "SUV"
-        },
-        {
-            "id": 4,
-            "brand": "Mercedes",
-            "model": "C200",
-            "year": 2019,
-            "fuelType": "Petrol",
-            "numberOfSeats": 5,
-            "picture": "https://bit.ly/3AgV1Tt",
-            "pricePerDay": 80,
-            "count": 15,
-            "type": "luxury"
-        },
-        {
-            "id": 5,
-            "brand": "Audi",
-            "model": "A4",
-            "year": 2017,
-            "fuelType": "Diesel",
-            "numberOfSeats": 5,
-            "picture": "https://bit.ly/3Gjhzag",
-            "pricePerDay": 70,
-            "count": 10,
-            "type": "cargo"
-        },
-        {
-            "id": 6,
-            "brand": "Toyota",
-            "model": "Avensis",
-            "year": 2016,
-            "fuelType": "Diesel",
-            "numberOfSeats": 5,
-            "picture": "https://bit.ly/3UEwOin",
-            "pricePerDay": 100,
-            "count": 15,
-            "type": "estate"
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "email": "johndoe@mail.xom",
-            "phoneNumber": "123456789",
-            "password": "123456"
-        },
-        {
-            "id": 2,
-            "name": "Mane Doe",
-            "email": "manedoe@mail.com",
-            "phoneNumber": "987654321",
-            "password": "123456"
-        },
-        {
-            "id": 3,
-            "name": "Koko G",
-            "email": "k@k",
-            "phoneNumber": "23545435",
-            "password": "123456"
-        }
-    ],
-    "rentalEvents": [
-        {
-            "id": 2,
-            "vehicleId": 2,
-            "customerId": 2,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        },
-        {
-            "id": 3,
-            "vehicleId": 3,
-            "customerId": 3,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        },
-        {
-            "id": 4,
-            "vehicleId": 4,
-            "customerId": 1,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        },
-        {
-            "id": 5,
-            "vehicleId": 5,
-            "customerId": 2,
-            "startDate": "2019-12-01",
-            "endDate": "2019-12-05"
-        }
-    ]
+  "vehicles": [
+    {
+      "id": 1,
+      "brand": "Ford",
+      "model": "Fiesta",
+      "year": 2010,
+      "fuelType": "Diesel",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3GjmU1g",
+      "pricePerDay": "51",
+      "count": 5,
+      "type": "economy"
+    },
+    {
+      "id": 2,
+      "brand": "Peugeot",
+      "model": "308",
+      "year": 2015,
+      "fuelType": "Petrol",
+      "numberOfSeats": "6",
+      "picture": "https://bit.ly/3O9s0yI",
+      "pricePerDay": 60,
+      "count": 20,
+      "type": "estate"
+    },
+    {
+      "id": 3,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2018,
+      "fuelType": "Diesel",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3EwU8Zr",
+      "pricePerDay": 100,
+      "count": 10,
+      "type": "SUV"
+    },
+    {
+      "id": 4,
+      "brand": "Mercedes",
+      "model": "C200",
+      "year": 2019,
+      "fuelType": "Petrol",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3AgV1Tt",
+      "pricePerDay": 80,
+      "count": 15,
+      "type": "luxury"
+    },
+    {
+      "id": 6,
+      "brand": "Toyota",
+      "model": "Avensis",
+      "year": 2016,
+      "fuelType": "Diesel",
+      "numberOfSeats": 5,
+      "picture": "https://bit.ly/3UEwOin",
+      "pricePerDay": 100,
+      "count": 15,
+      "type": "estate"
+    },
+    {
+      "brand": "Idk",
+      "model": "test model",
+      "year": "23334",
+      "fuelType": "Diesel",
+      "numberOfSeats": "15",
+      "pricePerDay": 24,
+      "picture": "https://media.architecturaldigest.com/photos/57c7003fdc03716f7c8289dd/master/pass/IMG%20Worlds%20of%20Adventure%20-%201.jpg",
+      "count": 5,
+      "type": "SUV",
+      "id": 7
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@mail.xom",
+      "phoneNumber": "123456789",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Mane Doe",
+      "email": "manedoe@mail.com",
+      "phoneNumber": "987654321",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "name": "Koko G",
+      "email": "k@k",
+      "phoneNumber": "23545435",
+      "password": "123456"
+    }
+  ],
+  "rentalEvents": [
+    {
+      "id": 2,
+      "vehicleId": 2,
+      "customerId": 2,
+      "startDate": "2019-12-01",
+      "endDate": "2019-12-05"
+    },
+    {
+      "id": 3,
+      "vehicleId": 3,
+      "customerId": 3,
+      "startDate": "2019-12-01",
+      "endDate": "2019-12-05"
+    },
+    {
+      "id": 4,
+      "vehicleId": 4,
+      "customerId": 1,
+      "startDate": "2019-12-01",
+      "endDate": "2019-12-05"
+    }
+  ]
 }

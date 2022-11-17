@@ -47,10 +47,10 @@ export function Login() {
                     <p>Please fill in this form to login into an account.</p>
                     <hr />
 
-                    <label for="email"><b>Email</b></label>
+                    <label htmlFor="email"><b>Email</b></label>
                     <input value={user.email} onChange={onInputChange} onBlur={onBlur} type="text" placeholder="Enter Email" name="email" id="email" required />
 
-                    <label for="password"><b>Password</b></label>
+                    <label htmlFor="password"><b>Password</b></label>
                     <input value={user.password} onChange={onInputChange} onBlur={onBlur} type="password" placeholder="Enter Password" name="password" id="password" required />
 
                     <button type="submit" className="registerbtn">Login</button>

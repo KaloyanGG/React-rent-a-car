@@ -1,0 +1,33 @@
+.customers {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    th,
+    td {
+        border-bottom: 1px solid black;
+    }
+
+    table {
+        width: 80%;
+        text-align: center;
+
+        tr {
+            td {
+                padding: 0.5rem;
+                width: 33.33%;
+            }
+            td:not(:nth-child(3)) {
+                border-right: 1px solid black;
+            }
+            .btn{
+                width: 5rem;
+            }
+        }
+    }
+
+
+}

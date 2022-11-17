@@ -1,18 +1,16 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../../../context/auth-context';
 import './VehicleCard.scss'
 
 export function VehicleCard({ vehicle, deleteVehicle }) {
 
-    const navigate= useNavigate();
+    const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
     const showDetails = () => {
         navigate(`/vehicle-list/${vehicle.id}`);
     };
-    //async function deleteVehicle(){
-    //    await deleteVehicleById(vehicle.id);
-    //    navigate('/vehicle-list'); //! WHY NOT WORKING??
-    //    
-    //};
 
     return (
         <div className="vehicle-card">
@@ -25,12 +23,14 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
                 <button>
                     Rent
                 </button>
-                <button onClick={()=>showDetails()}>
+                <button onClick={() => showDetails()}>
                     Details
                 </button>
-                <button onClick={()=>deleteVehicle(vehicle.id)}>
-                    Delete
-                </button>
+                {user &&
+                    <button onClick={() => deleteVehicle(vehicle.id)}>
+                        Delete
+                    </button>
+                }
             </div>
             <img src={vehicle.picture} alt="None" />
 

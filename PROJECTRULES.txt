@@ -1,0 +1,4 @@
+1. Only LoggedIn users can delete vehicles
+2. Only LoggedIn users can edit vehicles
+3. Only LoggedIn users can see Logout in navigation
+4. Only Logged out users can see Login/Register in navigtaion

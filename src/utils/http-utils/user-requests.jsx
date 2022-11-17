@@ -1,4 +1,6 @@
 import axios from "axios";
+import { useContext } from "react";
+import { AuthContext } from "../../context/auth-context";
 
 const BASE_URL = 'http://localhost:3001/customers';
 export function getAllUsers() {
@@ -6,6 +8,9 @@ export function getAllUsers() {
 }
 export function saveUser(user) {
     return axios.post(`${BASE_URL}`, user);
+}
+export function deleteUser(user) {
+    return axios.delete(`${BASE_URL}/${user.id}`);
 }
 
 export async function login(user) {

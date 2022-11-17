@@ -7,10 +7,10 @@ export function Header({ user }) {
         <header className="header">
             <nav>
                 <ul role="list">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/vehicle-list">Vehicle List</Link></li>
+                    <li><Link to="/customers">Customers</Link></li>
                     {user && <>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/vehicle-list">Vehicle List</Link></li>
-                        <li><Link to="/customers">Customers</Link></li>
                         <li><Link to="/logout">Logout</Link></li>
                     </>
                     }

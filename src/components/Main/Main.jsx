@@ -11,6 +11,8 @@ import { AuthContext } from "../../context/auth-context";
 import { Logout } from "../User/Logout/Logout";
 import { NonAuthenticatedGuard } from "../Guards/NonAuthenticatedGuard";
 import { AuthenticatedRoute } from "../Guards/AuthenticatedRoute";
+import { VehicleEdit } from "./VehicleList/VehicleEdit/VehicleEdit";
+import { VehicleAdd } from "./VehicleList/VehicleAdd/VehicleAdd";
 
 export function getLoggedUser() {
     return JSON.parse(localStorage.getItem('loggedUser'));
@@ -34,18 +36,20 @@ export function Main() {
 
     return (
         <main className="main">
-            <p>Hello, {personName || 'Guest'}!</p>
+            <p className="hello">Hello, {personName || 'Guest'}!</p>
             <Routes>
-                <Route exact path="/register" element={<NonAuthenticatedGuard><Register /></NonAuthenticatedGuard>} />
-                <Route exact path="/login" element={<NonAuthenticatedGuard><Login /></NonAuthenticatedGuard>} />
+                <Route path="/register" element={<NonAuthenticatedGuard><Register /></NonAuthenticatedGuard>} />
+                <Route path="/login" element={<NonAuthenticatedGuard><Login /></NonAuthenticatedGuard>} />
 
-{/* //!Fix me: */}
-                <Route exact path="/" element={<AuthenticatedRoute><Home /></AuthenticatedRoute>} >
-                    <Route path="/vehicle-list" element={<VehicleList />} />
-                    <Route path="/customers" element={<Customers />} />
-                    <Route path="/vehicle-list/:id" element={<VehicleInfo />} />
-                    <Route path="/logout" element={<Logout />} />
-                </Route>
+                <Route path="/" element={<Home />} />
+                <Route path="/vehicle-list" element={<VehicleList />} />
+                <Route path="/customers" element={<Customers />} />
+                <Route path="/vehicle-list/add" element={<AuthenticatedRoute><VehicleAdd /></AuthenticatedRoute>} />
+                {/* Change to Authenticated Route */}
+                <Route path="/vehicle-list/:id" element={<VehicleInfo />} />
+                <Route path="/vehicle-list/edit/:id" element={<AuthenticatedRoute><VehicleEdit /></AuthenticatedRoute>} />
+                <Route path="/logout" element={<AuthenticatedRoute><Logout /></AuthenticatedRoute>} />
+
             </Routes>
         </main>
     )
