@@ -11,6 +11,7 @@ export function VehicleEdit() {
         getVehicleById(params.id).then(response => {
             setVehicle(response.data);
         })
+
     }, []);
     function onFormSubmit(е) {
         е.preventDefault();
@@ -24,10 +25,7 @@ export function VehicleEdit() {
     }
     const cancel = () => {
         navigate(`/vehicle-list/${vehicle.id}`);
-
     }
-
-
 
     return (
         <div className="vehicle-edit">

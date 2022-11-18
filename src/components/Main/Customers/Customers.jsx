@@ -26,6 +26,9 @@ export function Customers() {
             return prevCustomers.filter(customer => customer.id !== user.id);
         });
     }
+    const edit = () => {
+        navigate('/customers/edit/' + user.id);
+    }
 
     return (
         <div className="customers">
@@ -49,7 +52,7 @@ export function Customers() {
                                 {user && user.name === customer.name &&
                                     <>
                                         <button className="btn" onClick={deleteMyself}>Delete</button>
-                                        <button className="btn">Edit</button>
+                                        <button className="btn" onClick={edit}>Edit</button>
                                         
                                     </>
                                 }

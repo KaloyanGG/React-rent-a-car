@@ -7,7 +7,7 @@
       "year": 2010,
       "fuelType": "Diesel",
       "numberOfSeats": 5,
-      "picture": "https://bit.ly/3GjmU1g",
+      "picture": "https://bit.ly/3EICSRm",
       "pricePerDay": "51",
       "count": 5,
       "type": "economy"
@@ -78,7 +78,7 @@
       "id": 1,
       "name": "John Doe",
       "email": "johndoe@mail.xom",
-      "phoneNumber": "123456789",
+      "phoneNumber": "12345678910",
       "password": "123456"
     },
     {

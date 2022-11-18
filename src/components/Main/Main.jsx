@@ -13,6 +13,8 @@ import { NonAuthenticatedGuard } from "../Guards/NonAuthenticatedGuard";
 import { AuthenticatedRoute } from "../Guards/AuthenticatedRoute";
 import { VehicleEdit } from "./VehicleList/VehicleEdit/VehicleEdit";
 import { VehicleAdd } from "./VehicleList/VehicleAdd/VehicleAdd";
+import { CustomerEdit } from "./Customers/CustomerEdit/CustomerEdit";
+import { AuthenticatedRouteCurrent } from "../Guards/AuthenticatedRouteCurrent";
 
 export function getLoggedUser() {
     return JSON.parse(localStorage.getItem('loggedUser'));
@@ -44,8 +46,8 @@ export function Main() {
                 <Route path="/" element={<Home />} />
                 <Route path="/vehicle-list" element={<VehicleList />} />
                 <Route path="/customers" element={<Customers />} />
+                <Route path="/customers/edit/:id" element={<AuthenticatedRouteCurrent><CustomerEdit /></AuthenticatedRouteCurrent>} />
                 <Route path="/vehicle-list/add" element={<AuthenticatedRoute><VehicleAdd /></AuthenticatedRoute>} />
-                {/* Change to Authenticated Route */}
                 <Route path="/vehicle-list/:id" element={<VehicleInfo />} />
                 <Route path="/vehicle-list/edit/:id" element={<AuthenticatedRoute><VehicleEdit /></AuthenticatedRoute>} />
                 <Route path="/logout" element={<AuthenticatedRoute><Logout /></AuthenticatedRoute>} />

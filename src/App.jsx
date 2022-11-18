@@ -14,6 +14,7 @@ function App() {
         setUser(data);
     }
     function userLogout() {
+        localStorage.removeItem('loggedUser');
         setUser(null);
     }
 

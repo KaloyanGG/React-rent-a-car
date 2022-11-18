@@ -6,9 +6,16 @@ const BASE_URL = 'http://localhost:3001/customers';
 export function getAllUsers() {
     return axios.get(BASE_URL);
 }
+export function getUserById(id){
+    return axios.get(`${BASE_URL}/${id}`);
+
+}
 export function saveUser(user) {
     return axios.post(`${BASE_URL}`, user);
 }
+export function updateUser(user) {
+    return axios.put(`http://localhost:3001/customers/${user.id}`, user);
+  }
 export function deleteUser(user) {
     return axios.delete(`${BASE_URL}/${user.id}`);
 }

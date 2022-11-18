@@ -20,7 +20,8 @@
 
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem 2rem;
+    padding: 4rem 5vw;
+    // padding: 4rem clamp(4rem, 15vw, 6rem);
     background-color: var(--clr-yellow);
     /*     .vehicle-card {
         width:30%;

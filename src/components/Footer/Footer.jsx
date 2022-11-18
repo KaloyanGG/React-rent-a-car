@@ -2,7 +2,7 @@ import './Footer.scss'
 export function Footer(){
     return (
         <footer className="footer">
-            <p>Footer</p>
+            <p>Thanks for using the website :)</p>
         </footer>
     )
 }
