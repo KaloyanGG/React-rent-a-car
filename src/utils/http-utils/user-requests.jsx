@@ -6,7 +6,7 @@ const BASE_URL = 'http://localhost:3001/customers';
 export function getAllUsers() {
     return axios.get(BASE_URL);
 }
-export function getUserById(id){
+export function getUserById(id) {
     return axios.get(`${BASE_URL}/${id}`);
 
 }
@@ -15,7 +15,7 @@ export function saveUser(user) {
 }
 export function updateUser(user) {
     return axios.put(`http://localhost:3001/customers/${user.id}`, user);
-  }
+}
 export function deleteUser(user) {
     return axios.delete(`${BASE_URL}/${user.id}`);
 }
@@ -29,7 +29,7 @@ export async function login(user) {
         throw new Error('Invalid username/password.');
     }
 
-    localStorage.setItem('loggedUser', JSON.stringify(foundUser));
+    localStorage.setItem('loggedUser', JSON.stringify({ id: foundUser.id, name: foundUser.name, email: foundUser.email, role: foundUser.role }));
     return foundUser;
 
 

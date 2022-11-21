@@ -15,6 +15,8 @@ import { VehicleEdit } from "./VehicleList/VehicleEdit/VehicleEdit";
 import { VehicleAdd } from "./VehicleList/VehicleAdd/VehicleAdd";
 import { CustomerEdit } from "./Customers/CustomerEdit/CustomerEdit";
 import { AuthenticatedRouteCurrent } from "../Guards/AuthenticatedRouteCurrent";
+import { VehicleRent } from "./VehicleList/VehicleRent/VehicleRent";
+import { Rentals } from "../Rentals/Rentals";
 
 export function getLoggedUser() {
     return JSON.parse(localStorage.getItem('loggedUser'));
@@ -48,8 +50,11 @@ export function Main() {
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/customers/edit/:id" element={<AuthenticatedRouteCurrent><CustomerEdit /></AuthenticatedRouteCurrent>} />
                 <Route path="/vehicle-list/add" element={<AuthenticatedRoute><VehicleAdd /></AuthenticatedRoute>} />
+                {/* TODO Only admin add vehicles */}
                 <Route path="/vehicle-list/:id" element={<VehicleInfo />} />
                 <Route path="/vehicle-list/edit/:id" element={<AuthenticatedRoute><VehicleEdit /></AuthenticatedRoute>} />
+                <Route path="/vehicle-list/rent/:id" element={<AuthenticatedRoute><VehicleRent /></AuthenticatedRoute>} />
+                <Route path="/rentals" element={<AuthenticatedRoute><Rentals /></AuthenticatedRoute>} />
                 <Route path="/logout" element={<AuthenticatedRoute><Logout /></AuthenticatedRoute>} />
 
             </Routes>

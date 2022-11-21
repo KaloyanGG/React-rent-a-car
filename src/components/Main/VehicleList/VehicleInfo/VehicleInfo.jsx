@@ -29,7 +29,7 @@ export function VehicleInfo() {
                     <p>Number of seats: {vehicle.numberOfSeats}</p>
                     <p>Price/day: {vehicle.pricePerDay}</p>
                     <p>Available: {vehicle.count}</p>
-                    {user &&
+                    {user && user.role === 'admin' &&
                         <button onClick={editVehicle}>Edit</button>
                     }
                 </div>

@@ -24,7 +24,6 @@ export function VehicleAdd() {
         vehicle.pricePerDay = Number(vehicle.pricePerDay);
         vehicle.year = Number(vehicle.year);
         vehicle.count = Number(vehicle.count);
-        console.log(vehicle);
         createVehicle(vehicle);
         navigate('/vehicle-list');
     }

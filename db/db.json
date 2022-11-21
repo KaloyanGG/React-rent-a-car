@@ -9,7 +9,7 @@
       "numberOfSeats": 5,
       "picture": "https://bit.ly/3EICSRm",
       "pricePerDay": "51",
-      "count": 5,
+      "count": 0,
       "type": "economy"
     },
     {
@@ -21,7 +21,7 @@
       "numberOfSeats": "6",
       "picture": "https://bit.ly/3O9s0yI",
       "pricePerDay": 60,
-      "count": 20,
+      "count": 16,
       "type": "estate"
     },
     {
@@ -45,7 +45,7 @@
       "numberOfSeats": 5,
       "picture": "https://bit.ly/3AgV1Tt",
       "pricePerDay": 80,
-      "count": 15,
+      "count": 13,
       "type": "luxury"
     },
     {
@@ -57,7 +57,7 @@
       "numberOfSeats": 5,
       "picture": "https://bit.ly/3UEwOin",
       "pricePerDay": 100,
-      "count": 15,
+      "count": 13,
       "type": "estate"
     },
     {
@@ -68,55 +68,93 @@
       "numberOfSeats": "15",
       "pricePerDay": 24,
       "picture": "https://media.architecturaldigest.com/photos/57c7003fdc03716f7c8289dd/master/pass/IMG%20Worlds%20of%20Adventure%20-%201.jpg",
-      "count": 5,
+      "count": 4,
       "type": "SUV",
       "id": 7
     }
   ],
   "customers": [
     {
+      "id": 100,
+      "name": "Admin",
+      "email": "admin@mail.com",
+      "phoneNumber": "101010",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
       "id": 1,
       "name": "John Doe",
       "email": "johndoe@mail.xom",
       "phoneNumber": "12345678910",
-      "password": "123456"
+      "password": "123456",
+      "role": "customer"
     },
     {
       "id": 2,
       "name": "Mane Doe",
       "email": "manedoe@mail.com",
       "phoneNumber": "987654321",
-      "password": "123456"
+      "password": "123456",
+      "role": "customer"
     },
     {
       "id": 3,
       "name": "Koko G",
       "email": "k@k",
       "phoneNumber": "23545435",
-      "password": "123456"
+      "password": "123456",
+      "role": "customer"
     }
   ],
   "rentalEvents": [
     {
-      "id": 2,
-      "vehicleId": 2,
-      "customerId": 2,
-      "startDate": "2019-12-01",
-      "endDate": "2019-12-05"
-    },
-    {
-      "id": 3,
-      "vehicleId": 3,
+      "vehicleId": "4",
       "customerId": 3,
-      "startDate": "2019-12-01",
-      "endDate": "2019-12-05"
+      "startDate": "2022-11-14",
+      "endDate": "2022-11-25",
+      "discount": 10,
+      "id": 1
     },
     {
-      "id": 4,
-      "vehicleId": 4,
+      "vehicleId": "1",
+      "customerId": 3,
+      "startDate": "2022-11-14",
+      "endDate": "2022-11-24",
+      "discount": 7,
+      "id": 2
+    },
+    {
+      "vehicleId": "2",
+      "customerId": 3,
+      "startDate": "2022-11-15",
+      "endDate": "2022-11-30",
+      "discount": 15,
+      "id": 3
+    },
+    {
+      "vehicleId": "2",
       "customerId": 1,
-      "startDate": "2019-12-01",
-      "endDate": "2019-12-05"
+      "startDate": "2022-11-14",
+      "endDate": "2022-11-23",
+      "discount": 7,
+      "id": 4
+    },
+    {
+      "vehicleId": "4",
+      "customerId": 1,
+      "startDate": "2022-11-08",
+      "endDate": "2022-12-09",
+      "discount": 10,
+      "id": 5
+    },
+    {
+      "vehicleId": "6",
+      "customerId": 2,
+      "startDate": "2022-11-15",
+      "endDate": "2022-11-16",
+      "discount": 0,
+      "id": 6
     }
   ]
 }

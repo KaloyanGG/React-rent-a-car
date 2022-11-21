@@ -11,6 +11,9 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
     const showDetails = () => {
         navigate(`/vehicle-list/${vehicle.id}`);
     };
+    const rent = (id) => {
+        navigate(`/vehicle-list/rent/${id}`);
+    }
 
     return (
         <div className="vehicle-card">
@@ -20,13 +23,13 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
 
             </div>
             <div className='buttons'>
-                <button>
+                <button onClick={()=>rent(vehicle.id)}>
                     Rent
                 </button>
                 <button onClick={() => showDetails()}>
                     Details
                 </button>
-                {user &&
+                {user && user.role === 'admin' &&
                     <button onClick={() => deleteVehicle(vehicle.id)}>
                         Delete
                     </button>

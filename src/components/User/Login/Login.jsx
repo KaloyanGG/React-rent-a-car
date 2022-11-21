@@ -7,8 +7,9 @@ export function Login() {
 
     const navigate = useNavigate();
     const [error, setError] = useState('');
-    const {userLogin} = useContext(AuthContext);
+    const { userLogin } = useContext(AuthContext);
     const [user, setUser] = useState({
+        id: '',
         name: '',
         email: '',
         phoneNumber: '',
@@ -18,22 +19,15 @@ export function Login() {
         setError('');
         setUser({ ...user, [e.target.name]: e.target.value });
     }
-    const onBlur = (e) => {
-        console.log(user);
-    }
     const onFormSubmit = async (e) => {
         e.preventDefault();
 
         login(user).then(response => {
-            console.log("Logged in user: ");
-            console.log(user);
 
-            userLogin(response);
+            userLogin({id: response.id,name: response.name, email: response.email, role: response.role });
 
             navigate('/vehicle-list');
         }).catch(error => {
-            console.log('Error:');
-            console.log(error);
             setError(error.message);
         });
     }
@@ -48,10 +42,10 @@ export function Login() {
                     <hr />
 
                     <label htmlFor="email"><b>Email</b></label>
-                    <input value={user.email} onChange={onInputChange} onBlur={onBlur} type="text" placeholder="Enter Email" name="email" id="email" required />
+                    <input value={user.email} onChange={onInputChange} type="text" placeholder="Enter Email" name="email" id="email" required />
 
                     <label htmlFor="password"><b>Password</b></label>
-                    <input value={user.password} onChange={onInputChange} onBlur={onBlur} type="password" placeholder="Enter Password" name="password" id="password" required />
+                    <input value={user.password} onChange={onInputChange} type="password" placeholder="Enter Password" name="password" id="password" required />
 
                     <button type="submit" className="registerbtn">Login</button>
                 </div>

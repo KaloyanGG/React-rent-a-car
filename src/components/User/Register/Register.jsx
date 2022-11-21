@@ -10,7 +10,8 @@ export function Register() {
         name: '',
         email: '',
         phoneNumber: '',
-        password: ''
+        password: '',
+        role: 'customer'
     });
     const onInputChange = (e) => {
         setPhoneError(false);
@@ -22,7 +23,6 @@ export function Register() {
         }
         //console.log(e.target);
         setUser({ ...user, [e.target.name]: e.target.value });
-        console.log(user);
 
     }
     const onFormSubmit = async (e) => {
@@ -37,8 +37,6 @@ export function Register() {
         }
 
         saveUser(user).then(response => {
-            console.log("Saved user: ");
-            console.log(user.toString());
             navigate('/login');
         })
     }
