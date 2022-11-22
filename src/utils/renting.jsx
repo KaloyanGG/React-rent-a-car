@@ -24,7 +24,6 @@ export async function rent(rentalEvent, user) {
         return;
     };
 
-
     if (days > 10) {
         discount = 10;
     } else if (days > 5) {

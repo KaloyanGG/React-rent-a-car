@@ -20,10 +20,30 @@ export function VehicleAdd() {
 
     const onFormSubmit = (e) => {
         e.preventDefault();
+        
         vehicle.numberOfSeats = Number(vehicle.numberOfSeats);
         vehicle.pricePerDay = Number(vehicle.pricePerDay);
         vehicle.year = Number(vehicle.year);
         vehicle.count = Number(vehicle.count);
+
+        if (vehicle.year < 1900 || vehicle.year > 2022) {
+            alert('Year must be between 1900 and 2022');
+            return;
+        }
+        if (vehicle.numberOfSeats < 1 || vehicle.numberOfSeats > 10) {
+            alert('Number of seats must be between 1 and 10');
+            return;
+
+        }
+        if (vehicle.pricePerDay < 1 || vehicle.pricePerDay > 1000) {
+            alert('Price per day must be between 1 and 1000');
+            return;
+        }
+        if (vehicle.count < 0 || vehicle.count > 100) {
+            alert('Count must be between 0 and 100');
+            return;
+        }
+
         createVehicle(vehicle);
         navigate('/vehicle-list');
     }
@@ -51,7 +71,7 @@ export function VehicleAdd() {
                 </div>
                 <div className="row">
                     <label htmlFor="year"><b>Construction year</b></label>
-                    <input value={vehicle.year} onChange={onInputChange} type="text" placeholder="Enter year" name="year" id="year" required />
+                    <input value={vehicle.year} onChange={onInputChange} type="number" placeholder="Enter year" name="year" id="year" required />
                 </div>
                 <div className="row">
                     <label htmlFor="fuelType"><b>Fuel type</b></label>
@@ -65,7 +85,7 @@ export function VehicleAdd() {
                 </div>
                 <div className="row">
                     <label htmlFor="numberOfSeats"><b>Number of seats</b></label>
-                    <input value={vehicle.numberOfSeats} onChange={onInputChange} type="text" placeholder="Enter number of seats" name="numberOfSeats" id="numberOfSeats" required />
+                    <input value={vehicle.numberOfSeats} onChange={onInputChange} type="number" placeholder="Enter number of seats" name="numberOfSeats" id="numberOfSeats" required />
                 </div>
                 <div className="row">
                     <label htmlFor="picture"><b>Image url</b></label>

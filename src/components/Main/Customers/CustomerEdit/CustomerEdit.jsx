@@ -10,6 +10,7 @@ export function CustomerEdit() {
     const [userC, setUserC] = useState({});
     const params = useParams();
     const navigate = useNavigate();
+    //const [error, setError] = useState(null);
     useEffect(() => {
         getUserById(params.id).then(response => {
             setUserC(response.data);
@@ -19,10 +20,17 @@ export function CustomerEdit() {
 
     function onFormSubmit(е) {
         е.preventDefault();
+
+        if(!/^[0-9]+$/.test(userC.phoneNumber)){
+            console.log(userC.phoneNumber);
+            alert('Phone number must contain only digits');
+            return;
+        }
+
         updateUser(userC).then(response => {
-            navigate(`/customers`);
             userLogout();
             alert('You have been Logged Out!');
+            navigate(`/customers`);
         })
 
     }

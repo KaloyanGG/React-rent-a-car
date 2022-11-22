@@ -6,10 +6,10 @@
       "model": "Fiesta",
       "year": 2010,
       "fuelType": "Diesel",
-      "numberOfSeats": 5,
+      "numberOfSeats": 3,
       "picture": "https://bit.ly/3EICSRm",
-      "pricePerDay": "51",
-      "count": 0,
+      "pricePerDay": 51,
+      "count": 1,
       "type": "economy"
     },
     {
@@ -21,7 +21,7 @@
       "numberOfSeats": "6",
       "picture": "https://bit.ly/3O9s0yI",
       "pricePerDay": 60,
-      "count": 16,
+      "count": 0,
       "type": "estate"
     },
     {

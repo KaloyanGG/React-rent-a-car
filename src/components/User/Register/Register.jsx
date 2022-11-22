@@ -21,16 +21,20 @@ export function Register() {
                 return;
             };
         }
-        //console.log(e.target);
         setUser({ ...user, [e.target.name]: e.target.value });
 
     }
     const onFormSubmit = async (e) => {
         e.preventDefault();
+        if(user.name.length()<3){
+            alert("Name must be at least 3 characters long");
+            return;
+        }
         if (user.password !== document.querySelector('#psw-repeat').value) {
             alert('Passwords do not match');
             return;
         }
+
         if (await emailExists(user.email)) {
             alert('Account with this email already exists');
             return;

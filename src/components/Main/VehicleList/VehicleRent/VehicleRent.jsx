@@ -21,6 +21,7 @@ export function VehicleRent() {
     }
     const onFormSubmit = (e) => {
         e.preventDefault();
+
         rent(rentalEvent, user);
         navigate('/rentals');
     }
@@ -48,7 +49,6 @@ export function VehicleRent() {
             </form>
         </div>
 
-        //TODO add rent functionality
 
 
 

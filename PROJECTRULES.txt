@@ -1,5 +1,5 @@
-1. Only Admin users can delete vehicles
-2. Only Admin users can edit vehicles
+1. Only Admin user can delete vehicles
+2. Only Admin user can edit vehicles
 3. Admin and customers can add vehicles
 3. Only LoggedIn users can see Logout in navigation
 4. Only Logged out users can see Login/Register in navigtaion.

@@ -15,6 +15,31 @@ export function VehicleEdit() {
     }, []);
     function onFormSubmit(е) {
         е.preventDefault();
+
+        vehicle.numberOfSeats = Number(vehicle.numberOfSeats);
+        vehicle.pricePerDay = Number(vehicle.pricePerDay);
+        vehicle.year = Number(vehicle.year);
+        vehicle.count = Number(vehicle.count);
+
+        if (vehicle.year < 1900 || vehicle.year > 2022) {
+            alert('Year must be between 1900 and 2022');
+            return;
+        }
+        if (vehicle.numberOfSeats < 1 || vehicle.numberOfSeats > 10) {
+            alert('Number of seats must be between 1 and 10');
+            return;
+
+        }
+        if (vehicle.pricePerDay < 1 || vehicle.pricePerDay > 1000) {
+            alert('Price per day must be between 1 and 1000');
+            return;
+        }
+        if (vehicle.count < 0 || vehicle.count > 100) {
+            alert('Count must be between 0 and 100');
+            return;
+        }
+
+
         updateVehicle(vehicle).then(response => {
             navigate(`/vehicle-list/${vehicle.id}`);
         })
@@ -43,7 +68,12 @@ export function VehicleEdit() {
                     </div>
                     <div className="row">
                         <label htmlFor="fuelType"><b>Fuel type</b></label>
-                        <input value={vehicle.fuelType} onChange={onInputChange} type="text" placeholder="Enter fuel type" name="fuelType" id="fuelType" required />
+                        <select value={vehicle.fuelType} onChange={onInputChange} placeholder="Enter fuel type" name="fuelType" id="fuelType" required >
+                            <option value="" selected disabled hidden>--Choose here--</option>
+                            {['Diesel', 'Electric', 'Hybrid', 'Petrol'].map((fuelType, index) => {
+                                return <option key={index} value={fuelType}>{fuelType}</option>
+                            })}
+                        </select>
                     </div>
                     <div className="row">
                         <label htmlFor="numberOfSeats"><b>Number of seats</b></label>
